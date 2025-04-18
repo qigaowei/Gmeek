@@ -416,7 +416,7 @@ class GMEEK():
             self.createPostHtml(issue)
 
         self.createPlistHtml()
-        self.createFeedXml()
+        # self.createFeedXml()
         print("====== create static html end ======")
 
     def runOne(self,number_str):
@@ -426,7 +426,7 @@ class GMEEK():
             listJsonName=self.addOnePostJson(issue)
             self.createPostHtml(self.blogBase[listJsonName]["P"+number_str])
             self.createPlistHtml()
-            self.createFeedXml()
+            # self.createFeedXml()
             print("====== create static html end ======")
         else:
             print("====== issue is closed ======")
